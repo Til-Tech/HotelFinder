@@ -1,0 +1,701 @@
+/*Website in 3 grundlegene verschiedene Bereiche geteilt mit je gestyltem Body zur optischen Zuordnung des Users*/
+/*Standard für die Index Seite*/
+body {
+    font-family: 'Oswald', sans-serif;
+    margin:0px;
+    background-color: white;
+    background-size: cover;
+    z-index: -2;
+    }
+/*Standard für alle Seiten auf die ein Hotel-Suchender kommen sollte*/
+body.hotelfinder{
+    background-color: #6BBF59;
+}
+/*Standard für die angemeldeten Hotelinhaber Seiten*/
+body.hotelcreator{
+    background-color: #93DEFF;
+}
+/*Räumliche Anordnung*/
+#eins{
+    z-index: 1;
+}
+#zwei{
+    z-index: 2;
+}
+#drei{
+    z-index: 3;
+}
+/*Standard Schriften*/
+p{
+    margin:0;
+}
+p1, p2 {
+    font-size: 50px;
+    margin: 0px;
+}
+p4{
+    font-size: 35px;
+    text-align: left;
+}
+p5{
+    font-size: 25px;
+    text-align: left;
+}
+p3{
+    color:#2f3640;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+p6{
+    font-style: oblique;
+}
+p7{
+    margin-top: 2%; 
+    margin-left: 1%;
+}
+/*3 jeweilige Logo mit Banner*/
+div.logo{
+    margin: 0px;
+    text-align: center;
+    background-color: #333333;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    z-index: 2;
+}
+div.logoHotelfinder{
+    margin: 0px;
+    text-align: center;
+    background-color: #009953;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    z-index: 2;
+}
+div.logoHotelcreator{
+    margin: 0px;
+    text-align: center;
+    background-color: #1AA1DB;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    z-index: 2;
+}
+/*Wrapperklassen die teils den Footer umfassen */
+#wrapper {
+    min-height: 100vh; /* belegt 100% des Ansichtsfensters */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* Höhe des Footers */
+}
+div.main{
+    display: flex;
+    width: 100%;
+}
+/*Footer*/
+footer{
+    /*Flexbox ist ein CSS3-Weblayoutmodell und ermöglicht, reaktionsschnelle Elemente 
+    innerhalb eines Containers abhängig von der Bildschirmgröße automatisch anzuordnen.*/
+    display: flex; 
+    justify-content: space-evenly; /*justify-content ordnet Elemente in der Horizontalen an*/
+    align-items: center; /*align-items ordnet Elemente in der Vertikalen an*/
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0; 
+    height:100px;
+}
+div.FooterLink{
+ border: white solid 2px;
+}
+a{
+    color: white;
+}
+/*Bilder im Hintergrund auf der Indexseite*/
+.mySlides{
+    width:100%;
+    height: auto;
+    position: fixed;
+    opacity: 0.7;
+}
+.background{
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    size: cover;
+}
+#backgroundSlider{
+    height: 100%; 
+    width:100%; 
+    position: fixed; 
+    z-index: -1; 
+    object-fit: cover;
+}
+#hintergrundBilder{
+    object-fit: cover; 
+    width:auto; 
+    height: auto; 
+    min-width: 100%; 
+    min-height: 100%; 
+    position: fixed; 
+    opacity: 0.8;
+} 
+/*Resultsseite*/
+    /*Filter auf der Resultsseite*/
+div.filter{
+    height: 100%;
+    width: 20%;
+    margin-top: 0.6%;
+    margin-left: 0.6%;
+    margin-right: 0.3%;
+    margin-bottom: 0;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    padding: 0.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+        /*Filter: Suchleiste*/
+#cover{
+    width: 90%;
+    padding: 2%;
+    margin: 0;
+    background-color: #333333;
+    border-radius: 40px;
+    box-shadow: 0 4px 0 #1c1c1c;
+}
+input{
+    color: #fff;
+    padding: 0;
+    margin: 2%;
+    border: 0;
+    background-color: transparent;
+}
+input[type="text"]{
+    display: flex;
+    float: left;
+    width: 77%;
+    height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 25px;
+}
+input[type="text"]::placeholder{
+    color: #FAFAFF;
+}
+.searchBtn {
+    margin-bottom: 0;
+    font-size: 30px;
+    float: right;
+    width: 18%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #FAFAFF;
+    cursor: pointer;
+    background-color: transparent;
+}
+.searchBtn:hover{
+    color: #6ee86a;
+}
+        /*Filter: Slider*/
+div.output{
+    background: #333333;
+    color:#FAFAFF;
+    border-radius: 12px;
+    padding: 1%;
+    padding-left:3%;
+    margin-top: 10%;
+    margin-bottom:4%;
+    width: 90%;
+    box-shadow: 0 2px 0 #1c1c1c;
+    font-size: 20px;
+}
+.slidecontainer {
+    width: 100%;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 91%;
+    height: 15px;
+    border-radius: 5px;
+    background: #cacaca;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    box-shadow: 0 2px 0 #808080;
+}
+.slider:hover {
+    opacity: 0.7;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #FAFAFF;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1C1C1C;
+    border-radius: none;
+}
+        /*(für Firefox)*/
+.slider::-moz-range-thumb {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #FAFAFF;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1C1C1C;
+    border-radius: none;
+}
+        /*Filter: Attribute*/
+.container{
+    max-width: 640px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+.containerHere{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+ul.attribute {
+    list-style: none;
+    padding: 1px;
+}
+ul.attribute li{
+  display: inline;
+}
+ul.attribute li label{
+    display: inline-block;
+    background-color: #FAFAFF;
+    border: 2px solid #1C1C1C;
+    color: #1c1c1c;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+ul.attribute li input[type="checkbox"]:checked + label {
+    border: 2px solid #1c1c1c;
+    background-color: #333333;
+    color: #FAFAFF;
+    transition: all .2s;
+}
+ul.attribute li input[type="checkbox"] {
+  display: absolute;
+}
+ul.attribute li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+ul.attribute li input[type="checkbox"]:focus + label {
+  border: 2px solid;
+}
+        /*Filter: Sterne*/
+fieldset, label { margin: 0; padding: 0; }
+.rating {
+    border: none;
+    float: left;
+}
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 10px;
+
+}
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+label.full{
+    font-size: 25px;
+    padding: 4px;
+    padding-left: 0;
+}
+            /*Hervorheben beim Drücken der Sterne*/
+.rating > input:checked ~ label, /* beim Klick zeigt den Stern Gold an */
+.rating:not(:checked) > label:hover, /* beim hovern über den Stern*/
+.rating:not(:checked) > label:hover ~ label { color: #FFD700} /* hovern über weniger Sterne */
+
+.rating > input:checked + label:hover, /* hovern über aktuellen Stern beim ändern der Sterne*/
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* aufhellen der geringeren Selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+    /*Ergebnisse auf der Resultsseite*/
+ul.results{
+    list-style-type: none;
+    text-align: center;
+    margin-right: 0.1%;
+    margin-top:0.2%;
+    width: 79%;
+    padding: 0px;
+    border-style: solid;
+    border-width: 0;
+    border-color: #1C1C1C;
+    border-radius: 4px;
+    background-color:transparent;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+li.element{
+    text-align: center;
+    margin: 0.5%;
+    border-radius: 6px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+div.image{
+    flex-wrap: wrap;
+    border-radius: 0.8em;
+    justify-content: left;
+    height: 200px;
+    width: 200px;
+}
+div.beschreibung{
+    background-color: #ffffff;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left:0.3em;
+    border-radius: 0.8em;
+    margin: 1em;
+    padding: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 200px;
+    width: 66%;
+}
+div.title{
+    display: inline-block;
+    width:100%;
+    margin-top: 2.5%;
+    padding: 0;
+    line-height: 12px;
+}
+div.sterne{
+    color: #FFD700;
+    width: 100%;
+    padding: 0;
+    margin-bottom:1%;
+}
+div.info{
+    text-align: left;
+    border-radius: 0.6em;
+    background-color: #ebebeb;
+    padding: 0.5em;
+    width:96%;
+    height: 36%;
+    margin-bottom:1%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+div.werte{
+    display: flex;
+    width:98%;
+    align-items: center;
+}
+div.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:#FAFAFF;
+    background-color: rgb(146, 146, 146);
+    border-radius: 3px;
+    width: 10%;
+    margin: 0;
+    margin-right: 0.5em;
+}
+div.wert{
+    font-size: 15px;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAFAFF;
+    border: 2px solid #1C1C1C;
+    color: #1C1C1C;
+    border-radius: 25px;
+    margin: 2px;
+    margin-right: 0.5em;
+}
+/* Register-Seite und Vorlage für viele weitere Seiten */
+div.shell{
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* Grauer Block-Bereich für Kompakte Informationen */
+div.register{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 800px;
+}
+    /* Platz für Überschriften */
+div.registerTopic{
+    width: 100%;
+}
+    /* gleichmäßige Aufsplittung in Links und Rechts */
+div.registerLeftRight{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+div.registerLeft{
+    width:48%;
+
+}
+div.registerRight{
+    width:48%;
+
+}
+    /*besondere Bedingung bei Eigabeflächen*/
+input[type=text].here {
+    width: 100%;
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+input[type=text].here#2 {
+    width: 100%;
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 3px;
+    box-sizing: border-box;
+    color: black;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+input[type=number] {
+    box-sizing: content-box;
+    width: 100%;
+    height: 30px;
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size: 1.5em;
+    padding: 0.2em 0.2em;
+    line-height: 1.25em;
+    height: 1.25em;
+}
+input[type=password] {
+    width: 100%;
+    height: 30px;
+    color: black;
+    font-size: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: grey;
+    opacity: 1; /* Firefox */
+}
+input[type=number]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: grey;
+    opacity: 1; /* Firefox */
+}
+input[type=password]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: grey;
+    opacity: 1; /* Firefox */
+}
+div.buttonHolder{
+    width: 100%;
+    text-align: center;
+}
+button[type=submit]{
+    position: center;
+
+}
+/*Knöpfe*/
+.button1 {
+    background-color: #333333; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.button1:hover {
+    background-color: rgb(113, 158, 114);
+}
+.button2{
+    background-color: #333333; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button2:hover {
+    background-color: rgb(113, 158, 114);
+}
+.button3{
+    background-color: #e4e4e4; 
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.button3:hover {
+    background-color: rgb(113, 158, 114);
+}
+.button4{
+    background-color: grey; 
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.button4:hover {
+    background-color: rgb(113, 158, 114);
+}
+/*weiterer Container*/
+.selfContainer{
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    max-width: 640px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    background-color: #ebebeb; 
+    border-radius: 15px; 
+    margin-top: 10%;
+}
+/* 404-Site */
+div.blank{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: center;
+    padding-top: 20%;
+    width: 100%;
+    color: #444;
+    font: normal 14px/20px Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    text-align: center;
+}
+/*simple globale ids*/
+#grey{
+    background-color: #333333;
+}
+#zentriert{
+    margin-top: 4%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+#space{
+    display: flex;
+    justify-content: space-between;
+}
+#upAndDown{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#eben{
+    display: flex;
+    justify-content: space-around;
+}
+#fehlerMeldung{
+    border: 2px black solid;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 2px;
+}
